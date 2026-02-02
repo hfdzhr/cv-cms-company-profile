@@ -1,16 +1,24 @@
 :root {
-  /* Premium Color Palette */
-  --color-primary: #0f172a; /* Slate 900 */
-  --color-secondary: #0ea5e9; /* Sky 500 */
-  --color-accent: #f59e0b; /* Amber 500 */
-  --color-text: #334155; /* Slate 700 */
-  --color-text-light: #94a3b8; /* Slate 400 */
-  --color-bg: #f8fafc; /* Slate 50 */
+   /* === CORE BRAND COLORS === */
+  --color-primary: #2497cd;     /* Curious Blue - MAIN CTA, link, highlight */
+  --color-secondary: #773a28;   /* Nutmeg - section highlight, badge */
+  --color-accent: #9b7055;      /* Leather - icon hover, underline */
+
+  /* === TEXT === */
+  --color-text: #201e1f;        /* Thunder - text utama */
+  --color-text-muted: #6b7280;  /* Abu netral untuk deskripsi */
+
+  /* === BACKGROUND === */
+  --color-bg: #f8fafc;          /* Light neutral */
+  --color-bg-soft: #f1f5f9;     /* Card background */
   --color-white: #ffffff;
 
-  /* Gradients */
-  --gradient-main: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-  --gradient-gold: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  /* === BORDER & DIVIDER === */
+  --color-border: #e5e7eb;
+
+  /* === GRADIENT === */
+  --gradient-main: linear-gradient(135deg, #2497cd 0%, #28a3d4 100%);
+  --gradient-dark: linear-gradient(135deg, #201e1f 0%, #2c2b2b 100%);
 
   /* Typography */
   --font-family: "Outfit", sans-serif;

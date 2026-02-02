@@ -2,7 +2,7 @@
   <nav class="navbar glass">
     <div class="container navbar-content">
       <NuxtLink to="/" class="brand">
-        CMS<span class="text-accent">Sampling</span>
+        <img src="/image/cv-cipta-mandiri-sampling-logo-background-remove.png" alt="Cipta Mandiri Sampling Logo" class="brand-logo" />
       </NuxtLink>
       
       <div class="menu-toggle" @click="isOpen = !isOpen">
@@ -45,10 +45,14 @@ const isOpen = ref(false)
 }
 
 .brand {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--color-primary);
-  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.brand-logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
 }
 
 .nav-links {

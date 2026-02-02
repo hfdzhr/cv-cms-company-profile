@@ -2,7 +2,9 @@
   <footer class="footer">
     <div class="container grid">
       <div class="col">
-        <h3 class="footer-brand">CMS<span class="text-accent">Sampling</span></h3>
+        <NuxtLink to="/" class="footer-brand-link">
+          <img src="/image/cv-cipta-mandiri-sampling-logo-background-remove.png" alt="Cipta Mandiri Sampling Logo" class="footer-logo" />
+        </NuxtLink>
         <p>Mitra terpercaya Anda untuk solusi alat sampling lingkungan berkualitas tinggi.</p>
       </div>
       
@@ -46,10 +48,18 @@
   margin-bottom: 40px;
 }
 
-.footer-brand {
-  font-size: 1.8rem;
+.footer-brand-link {
+  display: inline-block;
   margin-bottom: 20px;
-  color: #fff;
+}
+
+.footer-logo {
+  height: 60px; /* Slightly larger in footer */
+  width: auto;
+  object-fit: contain;
+  background-color: rgba(255, 255, 255, 0.9); /* Add background for visibility on dark footer */
+  padding: 5px;
+  border-radius: 8px;
 }
 
 h4 {
