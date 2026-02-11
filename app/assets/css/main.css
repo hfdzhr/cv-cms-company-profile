@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
    /* === CORE BRAND COLORS === */
   --color-primary: #2497cd;     /* Curious Blue - MAIN CTA, link, highlight */
@@ -24,7 +28,7 @@
   --font-family: "Outfit", sans-serif;
 
   /* Spacing */
-  --container-width: 1200px;
+--container-width: 1200px;
   --header-height: 80px;
 }
 

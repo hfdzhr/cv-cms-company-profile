@@ -1,51 +1,106 @@
 <template>
   <div>
     <!-- Hero Section -->
-    <section class="hero">
-      <div class="container hero-content text-center">
-        <h1 class="fade-in-up">Solusi Alat Sampling <br><span class="text-accent">Terlengkap & Terpercaya</span></h1>
-        <p class="hero-text fade-in-up" style="animation-delay: 0.2s">
+    <section class="relative pt-[200px] pb-[140px] overflow-hidden">
+      <!-- Background Image -->
+      <img src="/image/sampling-2.jpg" alt="Background" class="absolute inset-0 w-full h-full object-cover z-0" />
+      
+      <!-- Overlay -->
+      <div class="absolute inset-0 w-full h-full bg-gradient-to-br from-slate-900/85 to-slate-800/90 z-10"></div>
+      
+      <!-- Tech Lines -->
+      <div class="absolute inset-0 pointer-events-none z-20">
+        <div class="absolute w-px h-full bg-gradient-to-b from-transparent via-white/10 to-transparent left-[10%]"></div>
+        <div class="absolute w-px h-full bg-gradient-to-b from-transparent via-white/10 to-transparent left-[30%]"></div>
+        <div class="absolute w-px h-full bg-gradient-to-b from-transparent via-white/10 to-transparent left-[70%]"></div>
+        <div class="absolute w-px h-full bg-gradient-to-b from-transparent via-white/10 to-transparent left-[90%]"></div>
+      </div>
+
+      <!-- Corner Accents -->
+      <div class="absolute w-[60px] h-[60px] border-2 border-primary/50 z-20 top-10 left-10 border-r-0 border-b-0"></div>
+      <div class="absolute w-[60px] h-[60px] border-2 border-primary/50 z-20 top-10 right-10 border-l-0 border-b-0"></div>
+      <div class="absolute w-[60px] h-[60px] border-2 border-primary/50 z-20 bottom-10 left-10 border-r-0 border-t-0"></div>
+      <div class="absolute w-[60px] h-[60px] border-2 border-primary/50 z-20 bottom-10 right-10 border-l-0 border-t-0"></div>
+
+      <div class="container relative z-30 text-center">
+        <h1 class="fade-in-up text-5xl md:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-md">
+          Solusi Alat Sampling <br><span class="text-primary">Terlengkap & Terpercaya</span>
+        </h1>
+
+        <p class="fade-in-up hero-text text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10" style="animation-delay: 0.2s">
           CV Cipta Mandiri Sampling menyediakan berbagai macam alat sampling lingkungan, laboratorium, dan industri dengan standar kualitas terbaik.
         </p>
-        <div class="hero-buttons fade-in-up" style="animation-delay: 0.4s">
-          <NuxtLink to="/products" class="btn btn-primary">Lihat Produk</NuxtLink>
-          <NuxtLink to="/contact" class="btn btn-accent">Hubungi Kami</NuxtLink>
+
+        <div class="fade-in-up flex flex-col md:flex-row gap-5 justify-center" style="animation-delay: 0.4s">
+          <NuxtLink to="/products" class="inline-flex items-center justify-center px-8 py-3 rounded-full text-white bg-primary border-2 border-primary font-bold uppercase tracking-wider transition-all shadow-lg hover:bg-transparent hover:text-white hover:shadow-primary/60">
+            Lihat Produk
+          </NuxtLink>
+          <NuxtLink to="/contact" class="inline-flex items-center justify-center px-8 py-3 rounded-full text-white bg-transparent border-2 border-white font-bold uppercase tracking-wider transition-all hover:bg-white hover:text-primary hover:border-white">
+            Hubungi Kami
+          </NuxtLink>
+        </div>
+
+        <!-- Tech Stats -->
+        <div class="fade-in-up mt-16 pt-10 border-t border-white/10 flex flex-col md:flex-row justify-center items-center gap-10 md:gap-20" style="animation-delay: 0.6s">
+          <div class="text-center">
+            <span class="block text-3xl font-bold text-white leading-none">10+</span>
+            <span class="block text-sm text-slate-400 mt-1">Tahun Pengalaman</span>
+          </div>
+          <div class="hidden md:block w-px h-10 bg-white/20"></div>
+          <div class="text-center">
+            <span class="block text-3xl font-bold text-white leading-none">30+</span>
+            <span class="block text-sm text-slate-400 mt-1">Produk Tersedia</span>
+          </div>
+          <div class="hidden md:block w-px h-10 bg-white/20"></div>
+          <div class="text-center">
+            <span class="block text-3xl font-bold text-white leading-none">1000+</span>
+            <span class="block text-sm text-slate-400 mt-1">Klien Puas</span>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Features Section -->
-    <section class="section features-section">
+    <section class="py-24 bg-white">
       <div class="container">
-        <h2 class="text-center">Mengapa Memilih Kami?</h2>
-        <div class="grid-features">
-          <div class="feature-card">
-            <div class="icon-box"><i class="ri-medal-line"></i></div>
-            <h3>Kualitas Terbaik</h3>
-            <p>Produk kami terbuat dari bahan berkualitas tinggi dan memenuhi standar industri.</p>
+        <h2 class="text-3xl font-bold text-center text-thunder mb-12">Mengapa Memilih Kami?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Feature 1 -->
+          <div class="group p-10 rounded border border-border bg-white text-center transition-all duration-300 hover:-translate-y-2 hover:border-accent hover:shadow-xl">
+            <div class="text-4xl mb-5 text-secondary transition-colors group-hover:text-accent">
+              <i class="ri-medal-line"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-thunder">Kualitas Terbaik</h3>
+            <p class="text-muted">Produk kami terbuat dari bahan berkualitas tinggi dan memenuhi standar industri.</p>
           </div>
-          <div class="feature-card">
-            <div class="icon-box"><i class="ri-truck-line"></i></div>
-            <h3>Pengiriman Cepat</h3>
-            <p>Kami menjamin pengiriman yang aman dan tepat waktu ke seluruh Indonesia.</p>
+          <!-- Feature 2 -->
+          <div class="group p-10 rounded border border-border bg-white text-center transition-all duration-300 hover:-translate-y-2 hover:border-accent hover:shadow-xl">
+            <div class="text-4xl mb-5 text-secondary transition-colors group-hover:text-accent">
+              <i class="ri-truck-line"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-thunder">Pengiriman Cepat</h3>
+            <p class="text-muted">Kami menjamin pengiriman yang aman dan tepat waktu ke seluruh Indonesia.</p>
           </div>
-          <div class="feature-card">
-            <div class="icon-box"><i class="ri-customer-service-2-line"></i></div>
-            <h3>Layanan Sempurna</h3>
-            <p>Tim support kami siap membantu Anda dengan konsultasi teknis dan purna jual.</p>
+          <!-- Feature 3 -->
+          <div class="group p-10 rounded border border-border bg-white text-center transition-all duration-300 hover:-translate-y-2 hover:border-accent hover:shadow-xl">
+            <div class="text-4xl mb-5 text-secondary transition-colors group-hover:text-accent">
+              <i class="ri-customer-service-2-line"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-thunder">Layanan Sempurna</h3>
+            <p class="text-muted">Tim support kami siap membantu Anda dengan konsultasi teknis dan purna jual.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Featured Products Preview -->
-    <section class="section bg-light">
+    <section class="py-20 bg-bg-soft">
       <div class="container">
-        <div class="section-header">
-          <h2>Produk Unggulan</h2>
-          <NuxtLink to="/products" class="btn-link">Lihat Semua →</NuxtLink>
+        <div class="flex justify-between items-center mb-10">
+          <h2 class="text-3xl font-bold text-thunder">Produk Unggulan</h2>
+          <NuxtLink to="/products" class="text-primary font-semibold hover:text-accent transition-colors">Lihat Semua →</NuxtLink>
         </div>
-        <div class="grid-products">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <ProductCard 
             v-for="product in featuredProducts" 
             :key="product.id" 
@@ -56,11 +111,13 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
-      <div class="container text-center">
-        <h2>Butuh Penawaran Khusus?</h2>
-        <p>Hubungi tim kami untuk mendapatkan penawaran harga terbaik sesuai kebutuhan proyek Anda.</p>
-        <NuxtLink to="/contact" class="btn btn-primary">Minta Penawaran</NuxtLink>
+    <section class="py-24 bg-gradient-to-br from-slate-900 to-slate-800 text-white relative">
+      <div class="container text-center relative z-10">
+        <h2 class="text-3xl font-bold mb-4 text-white">Butuh Penawaran Khusus?</h2>
+        <p class="text-slate-300 mb-8 max-w-2xl mx-auto">Hubungi tim kami untuk mendapatkan penawaran harga terbaik sesuai kebutuhan proyek Anda.</p>
+        <NuxtLink to="/contact" class="inline-flex items-center justify-center px-8 py-3 rounded-full text-white bg-white/10 border border-white backdrop-blur-sm font-bold uppercase tracking-wider transition-all hover:bg-white hover:text-primary">
+          Minta Penawaran
+        </NuxtLink>
       </div>
     </section>
   </div>
@@ -79,97 +136,17 @@ useHead({
 </script>
 
 <style scoped>
-.hero {
-  padding: 180px 0 100px;
-  background: radial-gradient(circle at center, #f8fafc 0%, #e2e8f0 100%);
-  position: relative;
-  overflow: hidden;
+/* Utility animations */
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
 }
 
-.hero::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  right: -20%;
-  width: 800px;
-  height: 800px;
-  background: radial-gradient(circle, rgba(14, 165, 233, 0.1) 0%, transparent 70%);
-  border-radius: 50%;
-}
-
-.hero-text {
-  font-size: 1.25rem;
-  max-width: 700px;
-  margin: 20px auto 40px;
-  color: var(--color-text-light);
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-
-/* Features */
-.features-section {
-  background: #fff;
-}
-
-.grid-features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 50px;
-}
-
-.feature-card {
-  padding: 40px;
-  border-radius: 4px; /* Sharper */
-  border: 1px solid #e2e8f0;
-  background: #fff;
-  text-align: center;
-  transition: all 0.3s ease;
-}
-
-.feature-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--color-accent);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
-.icon-box {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: var(--color-secondary);
-}
-
-/* Products Preview */
-.bg-light { background-color: #f1f5f9; }
-
-.section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 40px;
-}
-
-.grid-products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-}
-
-/* CTA */
-.cta-section {
-  padding: 100px 0;
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-  color: #fff;
-}
-
-.cta-section h2 { color: #fff; }
-.cta-section p { color: #cbd5e1; margin-bottom: 30px; }
-.cta-section .btn-primary { 
-  background: #fff; 
-  color: var(--color-primary); 
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 </style>
