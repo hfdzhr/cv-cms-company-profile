@@ -15,7 +15,7 @@
         <li><NuxtLink to="/" @click="isOpen = false">Home</NuxtLink></li>
         <li><NuxtLink to="/about" @click="isOpen = false">About</NuxtLink></li>
         <li><NuxtLink to="/products" @click="isOpen = false">Products</NuxtLink></li>
-        <li><NuxtLink to="/contact" @click="isOpen = false" class="btn btn-primary">Contact</NuxtLink></li>
+        <li><NuxtLink to="/contact" @click="isOpen = false" class="btn btn-primary !text-white">Contact</NuxtLink></li>
       </ul>
     </div>
   </nav>

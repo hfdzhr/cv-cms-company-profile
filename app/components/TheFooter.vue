@@ -9,7 +9,7 @@
       </div>
       
       <div class="col">
-        <h4>Navigasi</h4>
+        <h4 class="!text-white">Navigasi</h4>
         <ul>
           <li><NuxtLink to="/">Home</NuxtLink></li>
           <li><NuxtLink to="/about">About Us</NuxtLink></li>
@@ -19,7 +19,7 @@
       </div>
 
       <div class="col">
-        <h4>Kontak</h4>
+        <h4 class="!text-white">Kontak</h4>
         <ul class="contact-info">
           <li><strong>Phone:</strong> +62 812-3456-7890</li>
           <li><strong>Email:</strong> info@blocksampling.com</li>
@@ -27,7 +27,7 @@
         </ul>
       </div>
     </div>
-    <div class="copyright text-center">
+    <div class="copyright text-center text-white">
       <p>&copy; {{ new Date().getFullYear() }} CV Cipta Mandiri Sampling. All rights reserved.</p>
     </div>
   </footer>
@@ -87,10 +87,15 @@ a:hover {
   color: #cbd5e1;
 }
 
+.contact-info li:hover {
+  color: var(--color-slate-900);
+
+}
+
 .copyright {
   border-top: 1px solid rgba(255,255,255,0.1);
   padding: 20px 0;
-  color: #64748b;
+  color: var(--color-white);
   font-size: 0.9rem;
 }
 </style>
