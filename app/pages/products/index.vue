@@ -1,17 +1,17 @@
 <template>
-  <div class="page-wrapper">
-    <section class="page-header text-center">
-      <div class="container">
-        <h1>Katalog Produk</h1>
-        <p class="subtitle">Temukan alat sampling berkualitas sesuai kebutuhan Anda</p>
+  <div>
+    <!-- Header -->
+    <section class="pt-[150px] pb-20 bg-primary text-center">
+      <div class="container mx-auto px-4">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">Katalog Produk</h1>
+        <p class="text-lg text-slate-200 mt-2">Temukan alat sampling berkualitas sesuai kebutuhan Anda</p>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <!-- Search bar/Filter could go here -->
-        
-        <div class="grid-products">
+    <!-- Products Grid -->
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <ProductCard 
             v-for="product in products" 
             :key="product.id" 
@@ -33,20 +33,3 @@ useHead({
   ]
 })
 </script>
-
-<style scoped>
-.page-header {
-  padding: 150px 0 80px;
-  background: var(--color-primary);
-  color: #fff;
-}
-
-.page-header h1 { color: #fff; }
-.subtitle { color: #cbd5e1; font-size: 1.2rem; margin-top: 10px; }
-
-.grid-products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-}
-</style>

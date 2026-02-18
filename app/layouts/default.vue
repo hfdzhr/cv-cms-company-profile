@@ -1,22 +1,9 @@
 <template>
-  <div class="layout">
+  <div class="flex flex-col min-h-screen">
     <TheNavbar />
-    <main class="main-content">
+    <main class="flex-1" style="padding-top: var(--header-height);">
       <slot />
     </main>
     <TheFooter />
   </div>
 </template>
-
-<style scoped>
-.layout {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.main-content {
-  flex: 1;
-  padding-top: var(--header-height); /* Prevent content hiding behind fixed navbar */
-}
-</style>

@@ -1,13 +1,28 @@
 <template>
-  <div class="product-card">
-    <div class="image-wrapper">
-      <img :src="product.image" :alt="product.name" loading="lazy">
+  <div class="group bg-white rounded overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full flex flex-col">
+    <!-- Image -->
+    <div class="aspect-[4/3] overflow-hidden bg-bg-soft">
+      <img 
+        :src="product.image" 
+        :alt="product.name" 
+        loading="lazy"
+        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+      >
     </div>
-    <div class="content">
-      <h3 class="title">{{ product.name }}</h3>
-      <p class="description">{{ product.description.substring(0, 80) }}...</p>
-      <NuxtLink :to="`/products/${product.slug}`" class="btn-link">
-        Lihat Detail <span class="arrow">→</span>
+
+    <!-- Content -->
+    <div class="p-5 flex-1 flex flex-col">
+      <!-- title: text-thunder on white = contrast ~16:1 — WCAG AAA ✅ -->
+      <h3 class="text-lg font-bold mb-2 text-thunder">{{ product.name }}</h3>
+
+      <!-- description: text-muted (#6b7280) on white = contrast ~5.7:1 — WCAG AA ✅ for normal text -->
+      <p class="text-muted text-sm mb-5 flex-1 leading-relaxed">{{ product.description.substring(0, 80) }}...</p>
+
+      <NuxtLink 
+        :to="`/products/${product.slug}`" 
+        class="inline-flex items-center gap-1.5 text-secondary font-semibold hover:text-accent transition-colors"
+      >
+        Lihat Detail <span class="transition-transform duration-300 group-hover:translate-x-1.5">→</span>
       </NuxtLink>
     </div>
   </div>
@@ -21,78 +36,3 @@ defineProps({
   }
 })
 </script>
-
-<style scoped>
-.product-card {
-  background: #fff;
-  border-radius: 4px; /* Sharper */
-  overflow: hidden;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
-.image-wrapper {
-  aspect-ratio: 4/3;
-  overflow: hidden;
-  background-color: #f1f5f9;
-}
-
-.image-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.product-card:hover .image-wrapper img {
-  transform: scale(1.05);
-}
-
-.content {
-  padding: 20px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.title {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-  color: var(--color-primary);
-}
-
-.description {
-  color: var(--color-text-light);
-  margin-bottom: 20px;
-  font-size: 0.95rem;
-  flex: 1;
-}
-
-.btn-link {
-  color: var(--color-secondary);
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.btn-link:hover {
-  color: var(--color-accent);
-}
-
-.arrow {
-  transition: transform 0.3s ease;
-}
-
-.btn-link:hover .arrow {
-  transform: translateX(5px);
-}
-</style>

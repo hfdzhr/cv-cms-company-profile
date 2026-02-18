@@ -2,164 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-   /* === CORE BRAND COLORS === */
-  --color-primary: #2497cd;     /* Curious Blue - MAIN CTA, link, highlight */
-  --color-secondary: #773a28;   /* Nutmeg - section highlight, badge */
-  --color-accent: #9b7055;      /* Leather - icon hover, underline */
+/* ===========================
+   BASE LAYER — Minimal resets
+   =========================== */
+@layer base {
+  :root {
+    --header-height: 80px;
+  }
 
-  /* === TEXT === */
-  --color-text: #201e1f;        /* Thunder - text utama */
-  --color-text-muted: #6b7280;  /* Abu netral untuk deskripsi */
+  body {
+    @apply font-sans bg-bg text-thunder leading-relaxed antialiased;
+  }
 
-  /* === BACKGROUND === */
-  --color-bg: #f8fafc;          /* Light neutral */
-  --color-bg-soft: #f1f5f9;     /* Card background */
-  --color-white: #ffffff;
+  a {
+    @apply no-underline text-inherit transition-all duration-300;
+  }
 
-  /* === BORDER & DIVIDER === */
-  --color-border: #e5e7eb;
-
-  /* === GRADIENT === */
-  --gradient-main: linear-gradient(135deg, #2497cd 0%, #28a3d4 100%);
-  --gradient-dark: linear-gradient(135deg, #201e1f 0%, #2c2b2b 100%);
-
-  /* Typography */
-  --font-family: "Outfit", sans-serif;
-
-  /* Spacing */
---container-width: 1200px;
-  --header-height: 80px;
+  /* WCAG-compliant heading colors — thunder (#201e1f) on light bg 
+     gives contrast ratio > 15:1, well above WCAG AAA requirement of 7:1 */
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-thunder leading-tight;
+  }
 }
 
-/* Reset & Base */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* ===========================
+   COMPONENT LAYER — Reusable
+   =========================== */
+@layer components {
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center px-8 py-3 rounded font-semibold cursor-pointer 
+           transition-all duration-200 border-none uppercase tracking-wide text-sm;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white border border-primary;
+  }
+
+  .btn-primary:hover {
+    @apply bg-slate-900 text-white -translate-y-0.5 border-white shadow-lg;
+  }
+
+  .btn-accent {
+    @apply bg-transparent text-accent border border-accent;
+  }
+
+  .btn-accent:hover {
+    @apply bg-accent text-white -translate-y-0.5;
+  }
+
+  /* Glass Effect */
+  .glass {
+    @apply bg-white/70 backdrop-blur-md border-b border-white/30;
+  }
 }
 
-body {
-  font-family: var(--font-family);
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
+/* ===========================
+   UTILITY LAYER — Animations
+   =========================== */
+@layer utilities {
+  .fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
 
-a {
-  text-decoration: none;
-  color: inherit;
-  transition: all 0.3s ease;
-}
-
-ul {
-  list-style: none;
-}
-
-/* Utilities */
-.container {
-  max-width: var(--container-width);
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.section {
-  padding: 80px 0;
-}
-
-.text-center {
-  text-align: center;
-}
-.text-primary {
-  color: var(--color-primary);
-}
-.text-accent {
-  color: var(--color-accent);
-}
-
-/* Buttons */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 32px;
-  border-radius: 4px; /* Sharper edges */
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  border: none;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  font-size: 0.9rem;
-}
-
-.btn-primary {
-  background: var(--color-primary);
-  color: var(--color-white);
-  border: 1px solid var(--color-primary);
-}
-
-.btn-primary:hover {
-  background: var(--color-slate-900);
-  color: var(--color-white);
-  transform: translateY(-1px);
-  border-color: var(--color-white);
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-
-.btn-accent {
-  background: transparent;
-  color: var(--color-accent);
-  border: 1px solid var(--color-accent);
-}
-
-.btn-accent:hover {
-  background: var(--color-accent);
-  color: var(--color-white);
-  transform: translateY(-1px);
-}
-
-/* Typography Helpers */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--color-primary);
-  line-height: 1.2;
-}
-
-h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
-}
-h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-/* Effects */
-.glass {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.fade-in-up {
-  animation: fadeInUp 0.8s ease-out forwards;
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
