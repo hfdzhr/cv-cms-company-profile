@@ -4,7 +4,7 @@
     <section class="pt-[150px] pb-20 bg-primary text-center">
       <div class="container mx-auto px-4">
         <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">Katalog Produk</h1>
-        <p class="text-lg text-slate-200 mt-2">Temukan alat sampling berkualitas sesuai kebutuhan Anda</p>
+        <p class="text-lg text-white mt-2">Temukan alat sampling berkualitas sesuai kebutuhan Anda</p>
       </div>
     </section>
 

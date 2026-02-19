@@ -6,7 +6,7 @@
         <!-- White text on bg-primary (#2497cd) = contrast ~3.2:1 for large text — WCAG AA Large ✅ -->
         <h1 class="fade-in-up text-4xl md:text-5xl font-bold text-white mb-2">Tentang Kami</h1>
         <!-- text-slate-200 on bg-primary = ~2.8:1 — acceptable for large decorative subtext -->
-        <p class="fade-in-up text-lg text-slate-200 mt-2">Mengenal lebih dekat CV Cipta Mandiri Sampling</p>
+        <p class="fade-in-up text-lg text-white mt-2">Mengenal lebih dekat CV Cipta Mandiri Sampling</p>
       </div>
     </section>
 

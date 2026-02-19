@@ -14,6 +14,7 @@ export default {
         primary: {
           DEFAULT: '#2497cd', // Curious Blue
           hover: '#28a3d4',
+          darker: '#1c739c'
         },
         secondary: '#773a28', // Nutmeg
         accent: '#9b7055',    // Leather
