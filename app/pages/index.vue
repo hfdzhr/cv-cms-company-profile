@@ -3,7 +3,7 @@
     <!-- Hero Section -->
     <section class="relative pt-[200px] pb-[140px] overflow-hidden">
       <!-- Background Image -->
-      <img src="/image/sampling-2.jpg" alt="Background" class="absolute inset-0 w-full h-full object-cover z-0" />
+      <img src="/image/image-hero-section.webp" alt="Background" class="absolute inset-0 w-full h-full object-cover z-0" />
       
       <!-- Overlay -->
       <div class="absolute inset-0 w-full h-full bg-gradient-to-br from-slate-900/85 to-slate-800/90 z-10"></div>
