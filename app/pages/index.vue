@@ -98,7 +98,7 @@
       <div class="container">
         <div class="flex justify-between items-center mb-10">
           <h2 class="text-3xl font-bold text-thunder">Produk Unggulan</h2>
-          <NuxtLink to="/products" class="text-primary font-semibold hover:text-accent transition-colors">Lihat Semua →</NuxtLink>
+          <NuxtLink to="/products" class="text-primary-darker font-semibold hover:text-accent transition-colors">Lihat Semua →</NuxtLink>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <ProductCard 
