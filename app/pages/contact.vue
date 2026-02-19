@@ -26,7 +26,7 @@
               <span class="text-2xl text-accent"><i class="ri-map-pin-2-line"></i></span>
               <div>
                 <strong class="text-thunder block mb-1">Alamat</strong>
-                <p class="text-muted text-sm leading-relaxed">Jl. Raya Sampling No. 123<br>Jakarta Selatan, DKI Jakarta 12345</p>
+                <p class="text-muted text-sm leading-relaxed">Jl. Cipining, <br> Desa Sidaharja, Kec. Pamarican, Kab. Ciamis, Jawa Barat 46382</p>
               </div>
             </div>
             
@@ -35,7 +35,7 @@
               <span class="text-2xl text-accent"><i class="ri-phone-line"></i></span>
               <div>
                 <strong class="text-thunder block mb-1">Telepon</strong>
-                <p class="text-muted text-sm">+62 812-3456-7890</p>
+                <p class="text-muted text-sm">+62 813-8633-6771</p>
               </div>
             </div>
             
@@ -61,13 +61,7 @@
             </a>
           </div>
 
-          <!-- Map Placeholder -->
-          <div class="w-full h-[300px] bg-bg-soft rounded border border-dashed border-slate-300 flex items-center justify-center text-muted">
-            <div class="text-center">
-              <i class="ri-map-2-line text-3xl mb-2 block"></i>
-              <p>Lokasi Google Maps</p>
-            </div>
-          </div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.1372699338453!2d108.57973317431!3d-7.4500617925611206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6589223ebb8535%3A0xdd811983dc262591!2sCipta%20mandiri%20sampling(CMS)!5e0!3m2!1sen!2sid!4v1771494818612!5m2!1sen!2sid" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </section>
