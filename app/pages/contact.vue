@@ -61,7 +61,15 @@
             </a>
           </div>
 
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.1372699338453!2d108.57973317431!3d-7.4500617925611206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6589223ebb8535%3A0xdd811983dc262591!2sCipta%20mandiri%20sampling(CMS)!5e0!3m2!1sen!2sid!4v1771494818612!5m2!1sen!2sid" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="w-full aspect-video rounded-xl overflow-hidden shadow-md">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.1372699338453!2d108.57973317431!3d-7.4500617925611206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6589223ebb8535%3A0xdd811983dc262591!2sCipta%20mandiri%20sampling(CMS)!5e0!3m2!1sen!2sid!4v1771494818612!5m2!1sen!2sid"
+              class="w-full h-full border-0"
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
         </div>
       </div>
     </section>
