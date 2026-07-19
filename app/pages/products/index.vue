@@ -3,7 +3,15 @@
     <!-- Header -->
     <section class="pt-[150px] pb-20 bg-primary text-center">
       <div class="container mx-auto px-4">
-        <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">Katalog Produk</h1>
+        <!-- Breadcrumbs -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+          <ol class="flex items-center justify-center gap-2 text-sm text-white/80">
+            <li><NuxtLink to="/" class="hover:text-white transition-colors">Beranda</NuxtLink></li>
+            <li><span class="mx-1">/</span></li>
+            <li class="text-white font-medium">Katalog Alat Sampling</li>
+          </ol>
+        </nav>
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">Katalog Alat Sampling</h1>
         <p class="text-lg text-white mt-2">Temukan alat sampling berkualitas sesuai kebutuhan Anda</p>
       </div>
     </section>
@@ -27,9 +35,12 @@
 const { products } = useProducts()
 
 useHead({
-  title: 'Katalog Produk',
+  title: 'Katalog Alat Sampling',
   meta: [
-    { name: 'description', content: 'Katalog lengkap alat sampling CV Cipta Mandiri Sampling. Water sampler, Soil auger, Plankton net, dan berbagai peralatan laboratorium lainnya.' }
+    { name: 'description', content: 'Katalog lengkap alat sampling lingkungan & laboratorium. Water sampler, soil auger, plankton net, secchi disk, sediment grab - harga terbaik di Indonesia.' },
+    { property: 'og:title', content: 'Katalog Alat Sampling - CV Cipta Mandiri Sampling' },
+    { property: 'og:description', content: 'Temukan berbagai alat sampling berkualitas untuk lingkungan, laboratorium & industri. Harga kompetitif, pengiriman ke seluruh Indonesia.' },
+    { property: 'og:url', content: 'https://cipta-sampling.vercel.app/products' },
   ]
 })
 </script>

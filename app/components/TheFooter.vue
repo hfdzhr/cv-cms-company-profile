@@ -18,10 +18,10 @@
       <div>
         <h4 class="text-white font-semibold text-lg mb-5">Navigasi</h4>
         <ul class="flex flex-col gap-2.5">
-          <li><NuxtLink to="/" class="text-slate-300 hover:text-primary hover:pl-1.5 transition-all duration-200">Home</NuxtLink></li>
-          <li><NuxtLink to="/about" class="text-slate-300 hover:text-primary hover:pl-1.5 transition-all duration-200">About Us</NuxtLink></li>
-          <li><NuxtLink to="/products" class="text-slate-300 hover:text-primary hover:pl-1.5 transition-all duration-200">Products</NuxtLink></li>
-          <li><NuxtLink to="/contact" class="text-slate-300 hover:text-primary hover:pl-1.5 transition-all duration-200">Contact</NuxtLink></li>
+          <li><NuxtLink to="/" class="text-slate-300 hover:text-primary hover:pl-1.5 transition-all duration-200">Beranda</NuxtLink></li>
+          <li><NuxtLink to="/about" class="text-slate-300 hover:text-primary hover:pl-1.5 transition-all duration-200">Tentang Kami</NuxtLink></li>
+          <li><NuxtLink to="/products" class="text-slate-300 hover:text-primary hover:pl-1.5 transition-all duration-200">Katalog Alat Sampling</NuxtLink></li>
+          <li><NuxtLink to="/contact" class="text-slate-300 hover:text-primary hover:pl-1.5 transition-all duration-200">Hubungi Kami</NuxtLink></li>
         </ul>
       </div>
 
@@ -30,9 +30,9 @@
         <h4 class="text-white font-semibold text-lg mb-5">Kontak</h4>
         <ul class="flex flex-col gap-2.5">
           <!-- text-slate-300 on slate-900: ~9.7:1 contrast — WCAG AAA ✅ -->
-          <li class="text-slate-300"><strong class="text-white">Phone:</strong> +62 812-3456-7890</li>
+          <li class="text-slate-300"><strong class="text-white">Telepon:</strong> +62 813-8633-6771</li>
           <li class="text-slate-300"><strong class="text-white">Email:</strong> info@blocksampling.com</li>
-          <li class="text-slate-300"><strong class="text-white">Address:</strong> Jl. Raya Sampling No. 123, Jakarta</li>
+          <li class="text-slate-300"><strong class="text-white">Alamat:</strong> Jl. Cipining, Desa Sidaharja, Kec. Pamarican, Kab. Ciamis, Jawa Barat 46382</li>
         </ul>
       </div>
     </div>

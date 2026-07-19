@@ -3,10 +3,16 @@
     <!-- Header -->
     <section class="pt-[150px] pb-20 bg-primary text-center">
       <div class="container mx-auto px-4">
-        <!-- White text on bg-primary (#2497cd) = contrast ~3.2:1 for large text — WCAG AA Large ✅ -->
+        <!-- Breadcrumbs -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+          <ol class="flex items-center justify-center gap-2 text-sm text-white/80">
+            <li><NuxtLink to="/" class="hover:text-white transition-colors">Beranda</NuxtLink></li>
+            <li><span class="mx-1">/</span></li>
+            <li class="text-white font-medium">Tentang Kami</li>
+          </ol>
+        </nav>
         <h1 class="fade-in-up text-4xl md:text-5xl font-bold text-white mb-2">Tentang Kami</h1>
-        <!-- text-slate-200 on bg-primary = ~2.8:1 — acceptable for large decorative subtext -->
-        <p class="fade-in-up text-lg text-white mt-2">Mengenal lebih dekat CV Cipta Mandiri Sampling</p>
+        <p class="fade-in-up text-lg text-white mt-2">Mengenal lebih dekat CV Cipta Mandiri Sampling - Supplier Alat Sampling Terpercaya</p>
       </div>
     </section>
 
@@ -57,9 +63,12 @@
 
 <script setup>
 useHead({
-  title: 'About Us',
+  title: 'Tentang Kami',
   meta: [
-    { name: 'description', content: 'Profil CV Cipta Mandiri Sampling. Visi, misi, dan sejarah kami sebagai supplier alat sampling terpercaya.' }
+    { name: 'description', content: 'Profil CV Cipta Mandiri Sampling - Supplier alat sampling lingkungan terpercaya di Indonesia. Sejak 10+ tahun melayani riset & pemantauan lingkungan.' },
+    { property: 'og:title', content: 'Tentang Kami - CV Cipta Mandiri Sampling' },
+    { property: 'og:description', content: 'Sejarah, visi, dan misi CV Cipta Mandiri Sampling sebagai supplier alat sampling terpercaya.' },
+    { property: 'og:url', content: 'https://cipta-sampling.vercel.app/about' },
   ]
 })
 </script>

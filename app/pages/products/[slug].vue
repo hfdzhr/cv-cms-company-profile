@@ -2,10 +2,16 @@
   <div v-if="product">
     <section class="py-20 mt-12">
       <div class="container mx-auto px-4">
-        <!-- Back Link -->
-        <NuxtLink to="/products" class="inline-flex items-center gap-2 mb-8 text-muted font-medium hover:text-primary transition-colors">
-          <i class="ri-arrow-left-line"></i> Kembali ke Katalog
-        </NuxtLink>
+        <!-- Breadcrumbs -->
+        <nav aria-label="Breadcrumb" class="mb-8">
+          <ol class="flex items-center gap-2 text-sm text-muted">
+            <li><NuxtLink to="/" class="hover:text-primary transition-colors">Beranda</NuxtLink></li>
+            <li><span class="mx-1">/</span></li>
+            <li><NuxtLink to="/products" class="hover:text-primary transition-colors">Alat Sampling</NuxtLink></li>
+            <li><span class="mx-1">/</span></li>
+            <li class="text-thunder font-medium">{{ product.name }}</li>
+          </ol>
+        </nav>
         
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <!-- Image Gallery -->
@@ -144,10 +150,69 @@ watch(product, () => {
 
 // Dynamic SEO
 useHead(() => ({
-  title: product.value ? product.value.name : 'Produk Tidak Ditemukan',
+  title: product.value ? `${product.value.name} - Harga & Spesifikasi` : 'Produk Tidak Ditemukan',
   meta: [
-    { name: 'description', content: product.value ? product.value.description : 'Detail produk alat sampling' }
-  ]
+    { name: 'description', content: product.value ? `${product.value.name}. ${product.value.description.substring(0, 150)}... Beli di CV Cipta Mandiri Sampling.` : 'Detail produk alat sampling' },
+    { property: 'og:title', content: product.value ? `${product.value.name} - CV Cipta Mandiri Sampling` : 'Produk Tidak Ditemukan' },
+    { property: 'og:description', content: product.value ? product.value.description.substring(0, 160) : '' },
+    { property: 'og:url', content: `https://cipta-sampling.vercel.app/products/${route.params.slug}` },
+    { property: 'og:image', content: product.value ? `https://cipta-sampling.vercel.app${product.value.image}` : '' },
+    { property: 'og:type', content: 'product' },
+  ],
+  script: product.value ? [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Beranda',
+            item: 'https://cipta-sampling.vercel.app'
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Alat Sampling',
+            item: 'https://cipta-sampling.vercel.app/products'
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: product.value.name,
+            item: `https://cipta-sampling.vercel.app/products/${route.params.slug}`
+          }
+        ]
+      })
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: product.value.name,
+        description: product.value.description,
+        image: product.value.images.map(img => img.startsWith('http') ? img : `https://cipta-sampling.vercel.app${img}`),
+        brand: {
+          '@type': 'Brand',
+          name: 'CV Cipta Mandiri Sampling'
+        },
+        offers: {
+          '@type': 'Offer',
+          url: `https://cipta-sampling.vercel.app/products/${route.params.slug}`,
+          priceCurrency: 'IDR',
+          price: product.value.price.replace(/[^0-9]/g, '') || '0',
+          availability: 'https://schema.org/InStock',
+          seller: {
+            '@type': 'Organization',
+            name: 'CV Cipta Mandiri Sampling'
+          }
+        }
+      })
+    }
+  ] : []
 }))
 
 const whatsappLink = computed(() => {

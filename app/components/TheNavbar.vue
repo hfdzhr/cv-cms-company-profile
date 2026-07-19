@@ -21,10 +21,10 @@
         ]"
         :style="{ top: 'var(--header-height)' }"
       >
-        <li><NuxtLink to="/" @click="isOpen = false" class="font-medium text-thunder hover:text-accent transition-colors">Home</NuxtLink></li>
-        <li><NuxtLink to="/about" @click="isOpen = false" class="font-medium text-thunder hover:text-accent transition-colors">About</NuxtLink></li>
-        <li><NuxtLink to="/products" @click="isOpen = false" class="font-medium text-thunder hover:text-accent transition-colors">Products</NuxtLink></li>
-        <li><NuxtLink to="/contact" @click="isOpen = false" class="btn btn-primary !text-white">Contact</NuxtLink></li>
+        <li><NuxtLink to="/" @click="isOpen = false" class="font-medium text-thunder hover:text-accent transition-colors">Beranda</NuxtLink></li>
+        <li><NuxtLink to="/about" @click="isOpen = false" class="font-medium text-thunder hover:text-accent transition-colors">Tentang Kami</NuxtLink></li>
+        <li><NuxtLink to="/products" @click="isOpen = false" class="font-medium text-thunder hover:text-accent transition-colors">Katalog Alat Sampling</NuxtLink></li>
+        <li><NuxtLink to="/contact" @click="isOpen = false" class="btn btn-primary !text-white">Hubungi Kami</NuxtLink></li>
       </ul>
     </div>
   </nav>

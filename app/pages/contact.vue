@@ -3,8 +3,16 @@
     <!-- Header -->
     <section class="pt-[150px] pb-20 bg-primary text-center">
       <div class="container mx-auto px-4">
+        <!-- Breadcrumbs -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+          <ol class="flex items-center justify-center gap-2 text-sm text-white/80">
+            <li><NuxtLink to="/" class="hover:text-white transition-colors">Beranda</NuxtLink></li>
+            <li><span class="mx-1">/</span></li>
+            <li class="text-white font-medium">Hubungi Kami</li>
+          </ol>
+        </nav>
         <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">Hubungi Kami</h1>
-        <p class="text-lg text-slate-200 mt-2">Kami siap membantu kebutuhan sampling Anda</p>
+        <p class="text-lg text-white mt-2">Kami siap membantu kebutuhan alat sampling Anda</p>
       </div>
     </section>
 
@@ -78,9 +86,12 @@
 
 <script setup>
 useHead({
-  title: 'Contact Us',
+  title: 'Hubungi Kami',
   meta: [
-    { name: 'description', content: 'Hubungi CV Cipta Mandiri Sampling via WhatsApp untuk penawaran harga terbaik alat sampling.' }
+    { name: 'description', content: 'Hubungi CV Cipta Mandiri Sampling via WhatsApp untuk penawaran harga terbaik alat sampling lingkungan & laboratorium.' },
+    { property: 'og:title', content: 'Hubungi Kami - CV Cipta Mandiri Sampling' },
+    { property: 'og:description', content: 'Chat via WhatsApp untuk penawaran harga alat sampling terbaik.' },
+    { property: 'og:url', content: 'https://cipta-sampling.vercel.app/contact' },
   ]
 })
 </script>

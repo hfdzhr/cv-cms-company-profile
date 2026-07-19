@@ -128,9 +128,46 @@ const { products } = useProducts()
 const featuredProducts = computed(() => products.value.slice(0, 3))
 
 useHead({
-  title: 'Home',
+  title: 'Beranda',
   meta: [
-    { name: 'description', content: 'CV Cipta Mandiri Sampling - Penyedia alat sampling lingkungan terpercaya dan berkualitas di Indonesia. Temukan produk water sampler, soil auger, dan lainnya.' }
+    { name: 'description', content: 'CV Cipta Mandiri Sampling - Supplier alat sampling lingkungan & laboratorium terpercaya di Indonesia. Jual water sampler, soil auger, plankton net, secchi disk dengan harga terbaik.' },
+    // Open Graph
+    { property: 'og:title', content: 'CV Cipta Mandiri Sampling - Supplier Alat Sampling Terpercaya' },
+    { property: 'og:description', content: 'Supplier alat sampling lingkungan & laboratorium terpercaya di Indonesia. 10+ tahun pengalaman, 30+ produk, 1000+ klien puas.' },
+    { property: 'og:url', content: 'https://cipta-sampling.vercel.app' },
+    { property: 'og:image', content: 'https://cipta-sampling.vercel.app/image/cv-cipta-mandiri-sampling-logo.png' },
+    // Twitter Card
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: 'CV Cipta Mandiri Sampling - Supplier Alat Sampling Terpercaya' },
+    { name: 'twitter:description', content: 'Supplier alat sampling lingkungan & laboratorium terpercaya di Indonesia.' },
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: 'CV Cipta Mandiri Sampling',
+        url: 'https://cipta-sampling.vercel.app',
+        logo: 'https://cipta-sampling.vercel.app/image/cv-cipta-mandiri-sampling-logo.png',
+        description: 'Supplier alat sampling lingkungan, laboratorium & industri terpercaya di Indonesia.',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Jl. Cipining, Desa Sidaharja, Kec. Pamarican',
+          addressLocality: 'Kab. Ciamis',
+          addressRegion: 'Jawa Barat',
+          postalCode: '46382',
+          addressCountry: 'ID'
+        },
+        contactPoint: {
+          '@type': 'ContactPoint',
+          telephone: '+62-813-8633-6771',
+          contactType: 'customer service',
+          availableLanguage: 'Indonesian'
+        },
+        sameAs: []
+      })
+    }
   ]
 })
 </script>
