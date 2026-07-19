@@ -28,6 +28,8 @@ export default defineNuxtConfig({
             "CV Cipta Mandiri Sampling - Supplier alat sampling lingkungan, laboratorium & industri terpercaya di Indonesia. Water sampler, soil auger, plankton net & 30+ produk lainnya.",
         },
         { name: "theme-color", content: "#0f172a" },
+        // Google Verification
+        { name: "google-site-verification", content: "DSEXWP4LUnMHKsM8AUYTpskHB11VeRfDZfJAgag6AYc" },
         // Open Graph
         { property: "og:type", content: "website" },
         { property: "og:site_name", content: "CV Cipta Mandiri Sampling" },
