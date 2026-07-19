@@ -54,20 +54,5 @@ export default defineNuxtConfig({
 
   modules: [
     "@nuxtjs/tailwindcss",
-    "@nuxtjs/sitemap",
   ],
-
-  sitemap: {
-    urls: [
-      "/",
-      "/about",
-      "/products",
-      "/contact",
-      "/products/secchi-disk-sample",
-      "/products/soil-auger-kit",
-      "/products/plankton-net",
-      "/products/sediment-grab-sampler",
-      "/products/air-sampler-impinger",
-    ],
-  },
 });
