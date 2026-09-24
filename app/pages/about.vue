@@ -12,7 +12,7 @@
           </ol>
         </nav>
         <h1 class="fade-in-up text-4xl md:text-5xl font-bold text-white mb-2">Tentang Kami</h1>
-        <p class="fade-in-up text-lg text-white mt-2">Mengenal lebih dekat CV Cipta Mandiri Sampling - Supplier Alat Sampling Terpercaya</p>
+        <p class="fade-in-up text-lg text-white mt-2">Mengenal lebih dekat CV Cipta Mandiri Sampling - Produsen Alat Sampling Laboratorium & Lingkungan</p>
       </div>
     </section>
 
@@ -21,15 +21,30 @@
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
-            <!-- text-thunder on bg (#f8fafc) = ~15:1 contrast — WCAG AAA ✅ -->
-            <h2 class="text-3xl font-bold text-thunder mb-6">Sejarah Kami</h2>
-            <!-- text-thunder on bg = ~15:1 — WCAG AAA ✅ -->
-            <p class="text-thunder leading-relaxed mb-4">Didirikan dengan semangat untuk mendukung kemajuan riset dan pemantauan lingkungan di Indonesia, CV Cipta Mandiri Sampling telah tumbuh menjadi penyedia terpercaya untuk berbagai alat sampling.</p>
-            <p class="text-thunder leading-relaxed">Kami memahami betapa pentingnya akurasi dalam pengambilan sampel. Oleh karena itu, kami berkomitmen untuk menyediakan peralatan yang tidak hanya tahan lama, tetapi juga presisi dan memenuhi standar internasional.</p>
+            <!-- text-thunder on bg (#f8fafc) = ~15:1 contrast — WCAG AAA Passed -->
+            <h2 class="text-3xl font-bold text-thunder mb-6">Tentang & Sejarah Kami</h2>
+            <!-- text-thunder on bg = ~15:1 — WCAG AAA Passed -->
+            <p class="text-thunder leading-relaxed mb-4">
+              Didirikan dengan semangat untuk mendukung riset ilmiah, praktisi lingkungan, dan analis laboratorium di Indonesia, <strong>CV Cipta Mandiri Sampling</strong> hadir sebagai produsen langsung peralatan sampling lapangan dan laboratorium yang berpusat di Ciamis, Jawa Barat.
+            </p>
+            <p class="text-thunder leading-relaxed mb-4">
+              Kami memfokuskan diri pada fabrikasi mandiri berbagai instrumen mekanikal sampling—mulai dari alat pengambil sedimen, bor tanah, jaring plankton, hingga pengukur kualitas air. Karena diproduksi langsung dari workshop kami, kami mampu menghadirkan produk dengan harga tangan pertama yang terjangkau serta fleksibel melayani pesanan kustom spesifikasi teknis sesuai metode uji yang diinginkan.
+            </p>
+            <p class="text-thunder leading-relaxed">
+              Kami berkomitmen untuk terus menyediakan peralatan yang tidak hanya kokoh dan tahan lama, tetapi juga memiliki tingkat kepresisian tinggi demi menjaga integritas setiap sampel penelitian Anda.
+            </p>
           </div>
-          <div class="h-[400px] bg-slate-300 rounded flex items-center justify-center">
-            <!-- text-slate-600 on slate-300 = ~3.3:1 — decorative placeholder, acceptable -->
-            <span class="font-bold text-slate-600 text-2xl tracking-wide uppercase">CMS Office Tour</span>
+          <div class="h-[400px] bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl flex flex-col items-center justify-center p-8 text-center text-white shadow-xl relative overflow-hidden">
+            <div class="w-16 h-16 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center text-sky-300 text-3xl mb-4">
+              <i class="ri-community-line"></i>
+            </div>
+            <h3 class="font-bold text-xl mb-2 text-white">Workshop Fabrikasi CMS</h3>
+            <p class="text-slate-300 text-sm max-w-sm">
+              Pusat produksi dan perakitan alat sampling laboratorium & lingkungan di Ciamis, Jawa Barat.
+            </p>
+            <span class="mt-4 inline-block text-xs uppercase tracking-wider bg-white/10 px-3 py-1 rounded-full text-slate-300">
+              Pengiriman ke Seluruh Indonesia
+            </span>
           </div>
         </div>
       </div>
@@ -42,7 +57,7 @@
           <!-- Visi Card -->
           <div class="bg-white p-10 rounded shadow-sm border-t-4 border-accent">
             <h3 class="text-xl font-bold text-primary mb-5">Visi</h3>
-            <!-- text-thunder on white = ~16:1 — WCAG AAA ✅ -->
+            <!-- text-thunder on white = ~16:1 — WCAG AAA Passed -->
             <p class="text-thunder leading-relaxed">Menjadi perusahaan penyedia peralatan sampling dan laboratorium terdepan di Indonesia yang dikenal akan kualitas, inovasi, dan layanan purna jual yang unggul.</p>
           </div>
           <!-- Misi Card -->
@@ -65,9 +80,9 @@
 useHead({
   title: 'Tentang Kami',
   meta: [
-    { name: 'description', content: 'Profil CV Cipta Mandiri Sampling - Supplier alat sampling lingkungan terpercaya di Indonesia. Sejak 10+ tahun melayani riset & pemantauan lingkungan.' },
+    { name: 'description', content: 'Profil CV Cipta Mandiri Sampling - Produsen alat sampling laboratorium dan lingkungan di Ciamis, Jawa Barat. Harga tangan pertama dan melayani custom spesifikasi.' },
     { property: 'og:title', content: 'Tentang Kami - CV Cipta Mandiri Sampling' },
-    { property: 'og:description', content: 'Sejarah, visi, dan misi CV Cipta Mandiri Sampling sebagai supplier alat sampling terpercaya.' },
+    { property: 'og:description', content: 'Sejarah, visi, dan komitmen CV Cipta Mandiri Sampling sebagai produsen alat sampling terpercaya di Indonesia.' },
     { property: 'og:url', content: 'https://cipta-sampling.vercel.app/about' },
   ]
 })

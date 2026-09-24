@@ -1,0 +1,62 @@
+[
+  {
+    "id": 101,
+    "slug": "soil-auger-kit",
+    "name": "Soil Auger Kit (Bor Tanah Lapangan)",
+    "category": "Sampling Tanah & Geoteknik",
+    "description": "Set lengkap bor tanah (Soil Auger Kit) buatan langsung workshop CV Cipta Mandiri Sampling untuk pengambilan sampel tanah lapisan tak terganggu maupun komposit. Terdiri dari berbagai varian mata bor (auger head) untuk berbagai formasi tanah (lempung, pasir, gambut) serta stang ekstensi yang dapat disesuaikan hingga kedalaman 5 meter.",
+    "price": "Hubungi Kami",
+    "rawPrice": 0,
+    "image": "https://placehold.co/600x400/0f172a/9b7055?text=Soil+Auger",
+    "images": [
+      "https://placehold.co/800x600/0f172a/9b7055?text=Soil+Auger+Full+Set",
+      "https://placehold.co/800x600/1e293b/9b7055?text=Soil+Auger+Head",
+      "https://placehold.co/800x600/334155/9b7055?text=Soil+Auger+Extensions"
+    ],
+    "tokopediaLink": "https://www.tokopedia.com/alat-samplinglingkungan",
+    "specifications": [
+      "Material: Stainless Steel 304 anti karat",
+      "Kedalaman Sampling: Ekstensi hingga 5 meter",
+      "Kelengkapan: T-Handle, Batang Ekstensi, 3 Mata Bor Tanah",
+      "Wadah Penyimpanan: Canvas Heavy Duty Bag",
+      "Layanan: Tersedia kustomisasi diameter dan panjang stang"
+    ],
+    "weight": 8,
+    "weightUnit": "kilogram",
+    "condition": "Baru",
+    "stock": "Pre-Order / Kustom",
+    "rating": 5,
+    "reviewCount": 0,
+    "aliases": ["soil-auger-kit"]
+  },
+  {
+    "id": 102,
+    "slug": "air-sampler-impinger",
+    "name": "Air Sampler Impinger (Alat Sampling Udara Ambien)",
+    "category": "Sampling Sedimen & Udara",
+    "description": "Perangkat sampling gas udara ambien dan emisi untuk analisis gas polutan (seperti SO2, NO2, NH3, H2S). Dilengkapi dengan pompa vakum diaphragm terkalibrasi, flow meter rotameter yang dapat diatur, serta rak midget impinger glassware presisi.",
+    "price": "Hubungi Kami",
+    "rawPrice": 0,
+    "image": "https://placehold.co/600x400/0f172a/9b7055?text=Air+Sampler",
+    "images": [
+      "https://placehold.co/800x600/0f172a/9b7055?text=Air+Sampler+Unit",
+      "https://placehold.co/800x600/1e293b/9b7055?text=Air+Sampler+Pump",
+      "https://placehold.co/800x600/334155/9b7055?text=Air+Sampler+Glassware"
+    ],
+    "tokopediaLink": "https://www.tokopedia.com/alat-samplinglingkungan",
+    "specifications": [
+      "Pompa: Diaphragm vacuum pump tahan beban kerja lapangan",
+      "Flow Rate: 0 - 2 Liter/menit (Adjustable Rotameter)",
+      "Glassware: Set 5 pieces Midget Impinger tabung kaca pyrex",
+      "Catu Daya: AC 220V / Opsi Baterai DC Lapangan",
+      "Box: Hardcase aluminium kokoh untuk mobilitas lapangan"
+    ],
+    "weight": 7,
+    "weightUnit": "kilogram",
+    "condition": "Baru",
+    "stock": "Pre-Order / Kustom",
+    "rating": 5,
+    "reviewCount": 0,
+    "aliases": ["air-sampler-impinger"]
+  }
+]

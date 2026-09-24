@@ -48,14 +48,26 @@
           
           <!-- Product Info -->
           <div>
-            <!-- text-thunder on bg = ~15:1 — WCAG AAA ✅ -->
+            <!-- Category Badge -->
+            <div v-if="product.category" class="mb-3">
+              <span class="inline-block bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full border border-primary/20">
+                {{ product.category }}
+              </span>
+            </div>
+
+            <!-- text-thunder on bg = ~15:1 — WCAG AAA Passed -->
             <h1 class="text-3xl md:text-4xl font-bold text-thunder mb-3">{{ product.name }}</h1>
-            <div class="text-2xl font-bold text-primary mb-8">{{ product.price }}</div>
+            <div class="flex items-center gap-3 mb-6">
+              <span class="text-2xl font-bold text-primary">{{ product.price }}</span>
+              <span class="text-xs bg-emerald-100 text-emerald-800 font-medium px-2.5 py-0.5 rounded">
+                Harga Langsung Produsen
+              </span>
+            </div>
             
             <!-- Description -->
             <div class="mb-8">
               <h3 class="text-lg font-semibold text-thunder mb-4 pb-3 border-b-2 border-bg-soft">Deskripsi</h3>
-              <p class="text-thunder leading-relaxed">{{ product.description }}</p>
+              <p class="text-thunder leading-relaxed whitespace-pre-line">{{ product.description }}</p>
             </div>
             
             <!-- Specifications -->
@@ -68,32 +80,32 @@
               </ul>
             </div>
             
-            <!-- Actions -->
-            <div class="flex flex-wrap gap-4 mt-10">
-              <a 
-                :href="product.tokopediaLink" 
-                target="_blank" 
-                class="btn bg-[#42b549] text-white border border-[#42b549] hover:bg-[#37a33e] hover:-translate-y-0.5 hover:shadow-lg"
-              >
-                <i class="ri-store-2-line mr-2"></i> Beli di Tokopedia
-              </a>
+            <!-- Actions (WhatsApp Primary, Tokopedia Secondary) -->
+            <div class="flex flex-col sm:flex-row gap-3 mt-8">
               <a 
                 :href="whatsappLink" 
                 target="_blank" 
-                class="inline-flex items-center justify-center px-8 py-3 rounded border-2 border-[#25d366] text-[#25d366] font-semibold transition-all duration-200 hover:bg-[#25d366] hover:text-white"
+                class="inline-flex items-center justify-center gap-2 bg-[#25d366] text-white px-8 py-3.5 rounded-lg font-bold text-base shadow-lg hover:bg-[#20bd5a] hover:shadow-xl transition-all duration-200"
               >
-                <i class="ri-whatsapp-line mr-2"></i> Chat WhatsApp
+                <i class="ri-whatsapp-line text-2xl"></i> Chat WhatsApp (Harga Pabrik & Custom)
+              </a>
+              <a 
+                v-if="product.tokopediaLink"
+                :href="product.tokopediaLink" 
+                target="_blank" 
+                class="inline-flex items-center justify-center gap-2 bg-white text-[#42b549] border-2 border-[#42b549] px-6 py-3.5 rounded-lg font-semibold hover:bg-[#42b549] hover:text-white transition-all duration-200"
+              >
+                <i class="ri-store-2-line text-xl"></i> Beli di Tokopedia
               </a>
             </div>
 
             <!-- WhatsApp Discount Banner -->
             <div class="mt-6 p-4 bg-[#25d366]/10 border border-[#25d366]/30 rounded-lg flex items-start gap-3">
-              <i class="ri-whatsapp-line text-[#25d366] text-2xl mt-0.5 shrink-0"></i>
+              <i class="ri-shield-check-line text-[#25d366] text-2xl mt-0.5 shrink-0"></i>
               <div>
-                <p class="text-thunder font-semibold text-sm">Dapatkan Harga Lebih Murah via WhatsApp!</p>
+                <p class="text-thunder font-semibold text-sm">Keuntungan Pesan Langsung via WhatsApp</p>
                 <p class="text-muted text-sm mt-1 leading-relaxed">
-                  Hubungi kami langsung melalui WhatsApp untuk mendapatkan <strong class="text-[#25d366]">harga spesial</strong> 
-                  dan penawaran eksklusif yang tidak tersedia di marketplace. Konsultasi gratis!
+                  Dapatkan <strong class="text-emerald-700">harga tangan pertama</strong> tanpa biaya layanan marketplace, konsultasi gratis untuk kustomisasi ukuran/material, dan panduan teknis langsung dari perakit alat.
                 </p>
               </div>
             </div>
@@ -217,7 +229,7 @@ useHead(() => ({
 
 const whatsappLink = computed(() => {
   if (!product.value) return '#'
-  const text = `Halo, saya tertarik dengan produk ${product.value.name}`
-  return `https://wa.me/6281234567890?text=${encodeURIComponent(text)}`
+  const text = `Halo CV Cipta Mandiri Sampling, saya tertarik dengan produk ${product.value.name}. Bisa info harga langsung produsen dan opsi kustomisasinya?`
+  return `https://wa.me/6281386336771?text=${encodeURIComponent(text)}`
 })
 </script>
