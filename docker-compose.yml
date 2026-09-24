@@ -1,0 +1,25 @@
+services:
+  app:
+    container_name: cipta-sampling-dev
+    build:
+      context: .
+      target: dev
+    ports:
+      - "${PORT:-3000}:3000"
+    volumes:
+      # Bind mount project root for instant hot-reload
+      - .:/app
+      # Anonymous volumes to prevent host node_modules and .nuxt from shadowing container
+      - /app/node_modules
+      - /app/.nuxt
+    environment:
+      - NODE_ENV=development
+      - HOST=0.0.0.0
+      - PORT=3000
+      # Enable polling if running Docker on Windows without WSL2 filesystem
+      - WATCHPACK_POLLING=${WATCHPACK_POLLING:-false}
+    env_file:
+      - path: .env
+        required: false
+    restart: unless-stopped
+    command: pnpm dev

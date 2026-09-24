@@ -1,0 +1,26 @@
+services:
+  app:
+    container_name: cipta-sampling-prod
+    build:
+      context: .
+      target: production
+    ports:
+      - "${PORT:-3000}:3000"
+    environment:
+      - NODE_ENV=production
+      - HOST=0.0.0.0
+      - PORT=3000
+    env_file:
+      - path: .env
+        required: false
+    restart: always
+    security_opt:
+      - no-new-privileges:true
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 512M
+        reservations:
+          cpus: "0.25"
+          memory: 128M

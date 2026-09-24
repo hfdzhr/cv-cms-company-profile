@@ -8,6 +8,11 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "docker:dev": "docker compose up --build",
+    "docker:dev:down": "docker compose down",
+    "docker:prod": "docker compose -f docker-compose.prod.yml up -d --build",
+    "docker:prod:down": "docker compose -f docker-compose.prod.yml down",
+    "docker:prod:logs": "docker compose -f docker-compose.prod.yml logs -f app",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {

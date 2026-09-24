@@ -1,0 +1,47 @@
+# Dependencies & Package Managers
+node_modules
+.pnpm-store
+
+# Nuxt & Nitro build outputs and cache
+.output
+.nuxt
+.nitro
+.data
+.cache
+dist
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Git & IDE configs
+.git
+.gitignore
+.vscode
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Logs and runtime artifacts
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Docker files
+docker-compose*.yml
+Dockerfile*
+.dockerignore
+
+# Repository documentation and tool files
+README.md
+CONTEXT.md
+.pi
+.serena
+.agents
+skills-lock.json
